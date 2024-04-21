@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import ProcessBar from '../ProcessBar/ProcessBar';
 
 const LoadingPage = () => {
