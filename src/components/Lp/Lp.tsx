@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { DateTime } from "luxon";
 import { useEffect, useState } from 'react';
+import ImgScroll from "../../assets/img/img_scroll.jpg"
 
 const Lp = () => {
     const startDate = DateTime.fromISO("2023-08-15")
@@ -96,7 +97,7 @@ const Lp = () => {
                         <span className='whitespace-nowrap'>❤️ Nang Kyi Phyu Khin ❤️ Ye Myint Kyaw</span>
                         <span className='whitespace-nowrap'>❤️ Nang Kyi Phyu Khin ❤️ Ye Myint Kyaw</span>
                     </p>
-                    <p className='names font-bold flex flex-nowrap overflow-hidden'>
+                    <p className='names font-bold flex flex-nowrap'>
                         <span className='whitespace-nowrap'>❤️ Nang Kyi Phyu Khin ❤️ Ye Myint Kyaw</span>
                         <span className='whitespace-nowrap'>❤️ Nang Kyi Phyu Khin ❤️ Ye Myint Kyaw</span>
                         <span className='whitespace-nowrap'>❤️ Nang Kyi Phyu Khin ❤️ Ye Myint Kyaw</span>
@@ -125,10 +126,10 @@ const Lp = () => {
                 </div>
                 <div className='flex overflow-hidden'>
                     <figure className='img-scroll min-w-[100%] h-auto aspect-[1280/280]'>
-                        <img src="./src/assets/img/img_scroll.jpg" className='h-full w-full object-contain object-' width={1280} height={280} loading='eager' alt="" />
+                        <img src={ImgScroll} className='h-full w-full object-contain object-' width={1280} height={280} loading='eager' alt="" />
                     </figure>
                     <figure className='img-scroll min-w-[100%] h-auto aspect-[1280/280]'>
-                        <img src="./src/assets/img/img_scroll.jpg" className='h-full w-full object-contain object-' width={1280} height={280} loading='eager' alt="" />
+                        <img src={ImgScroll} className='h-full w-full object-contain object-' width={1280} height={280} loading='eager' alt="" />
                     </figure>
                 </div>
             </div>
