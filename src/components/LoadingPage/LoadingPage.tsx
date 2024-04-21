@@ -52,7 +52,7 @@ const LoadingPage = () => {
 
     },[])
     return (
-        <div className="loading absolute top-0 w-full max-h-screen h-screen flex flex-col px-10 bg-slate-50">
+        <div className="loading absolute top-0 z-20 w-full max-h-screen h-screen flex flex-col px-10 bg-slate-50">
             <div className="flex-1 flex items-end w-full max-w-[1350px] mx-auto">
                 <div className="image-inner w-full flex items-end justify-between gap-14 overflow-hidden">
                     <figure className="image w-auto h-full max-h-[297px] aspect-[223/297] ">

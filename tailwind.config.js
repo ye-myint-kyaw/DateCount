@@ -9,6 +9,9 @@ export default {
       colors:{
         black:"#333",
         yellow2:"#FFE074"
+      },
+      fontFamily:{
+        myanmar:  "Padauk"
       }
     },
   },
