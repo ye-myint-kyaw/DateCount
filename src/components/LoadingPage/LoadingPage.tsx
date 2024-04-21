@@ -30,7 +30,7 @@ const LoadingPage = () => {
         })
         .to(".arrow",{
           left:"calc(50% - 5px)",
-          bottom:"-20vh",
+          bottom:"-15vh",
         })
         .to(".arrow",{
           rotate:270,
