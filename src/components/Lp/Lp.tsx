@@ -46,21 +46,21 @@ const Lp = () => {
         <div className='w-full max-h-screen h-screen flex flex-col bg-slate-50'>
             <div className="flex-1 flex flex-col justify-center items-center gap-1 w-fit mx-auto">
                 <p className='text-lg text-start w-full font-myanmar font-semibold'>နန်း</p>
-                <p className='text-3xl font-semibold'>
+                <p className='text-3xl font-semibold text-center'>
                     {years ? years > 0 && <>
                         <span>{(years - 10 >= 0) ? years : "0" + years}</span>
                         <span>{years > 1 ? "Years" : "Year"}</span>
                     </>:""}
                     <span>{(months && months - 10 >= 0) ? months : "0" + months} </span>
-                    <span>{months && months > 1 ? "Months" : "Month"} : </span>
+                    <span>{months && months > 1 ? "Months" : "Month"} : </span>  
                     <span>{(days && days - 10 >= 0) ? days : "0" + days} </span>
-                    <span>{days && days > 1 ? "Days" : "Day"} : </span>
+                    <span>{days && days > 1 ? "Days" : "Day"} <span className='hidden md:inline'>:</span> </span> <br className='md:hidden'/>
                     <span>{(hours && hours - 10 >= 0) ? hours : "0" + hours} </span>
-                    <span>{hours && hours > 1 ? "Hours" : "Hour"} : </span>
+                    <span><span className='hidden sp:inline'>{hours && hours > 1 ? "Hours" : "Hour"}</span> : </span>
                     <span>{(minutes && minutes - 10 >= 0) ? minutes : "0" + minutes} </span>
-                    <span>{minutes && minutes > 1 ? "Minutes" : "Minute"} : </span>
+                    <span><span className='hidden sp:inline'>{minutes && minutes > 1 ? "Minutes" : "Minute"}</span> : </span>
                     <span>{(seconds && seconds - 10 >= 0) ? Math.floor(seconds) : "0" + (seconds && Math.floor(seconds))} </span>
-                    <span>{seconds&&(Math.floor(seconds)) > 1 ? "Seconds" : "Second"}</span>
+                    <span className='hidden sp:inline'>{seconds&&(Math.floor(seconds)) > 1 ? "Seconds" : "Second"}</span>
                 </p>
                 <div className=' w-full flex justify-between'>
                     <div className=''>
