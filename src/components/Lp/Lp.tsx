@@ -7,14 +7,16 @@ import ImgScroll from "../../assets/img/img_scroll.jpg"
 const Lp = () => {
     const startDate = DateTime.fromISO("2023-08-15")
     const now = DateTime.now();
+    const totalDays = now.diff(startDate, "days").toObject(); 
     const [time, setTime] = useState(now.diff(startDate, ["years", 'months', 'days', "hours", "minutes", "seconds"]).toObject());
     const { years, months, days, hours, minutes, seconds } = time
+    console.log(totalDays);
+    
     useEffect(() => {
         const updateTime = setInterval(() => {
             const updatedNow = DateTime.now();
             const updatedTime = updatedNow.diff(startDate, ["years", 'months', 'days', "hours", "minutes", "seconds"]).toObject();
             setTime(updatedTime)
-
         }, 1000)
 
         return () => clearInterval(updateTime);
@@ -60,13 +62,18 @@ const Lp = () => {
                     <span>{(seconds && seconds - 10 >= 0) ? Math.floor(seconds) : "0" + (seconds && Math.floor(seconds))} </span>
                     <span>{seconds&&(Math.floor(seconds)) > 1 ? "Seconds" : "Second"}</span>
                 </p>
-                <div className='texts text-lg text-end w-full font-myanmar flex flex-col overflow-hidden font-semibold h-[29px]'>
-                    <span>ချစ်တယ်</span>
-                    <span>မြတ်နိုးတယ်</span>
-                    <span>အတူရှိချင်တယ်</span>
-                    <span>ချစ်တယ်</span>
-                    <span>မြတ်နိုးတယ်</span>
-                    <span>အတူရှိချင်တယ်</span>
+                <div className=' w-full flex justify-between'>
+                    <div className=''>
+                        {typeof totalDays.days == "number" && Math.floor(totalDays?.days)} days
+                    </div>
+                    <div className='texts text-lg text-end font-myanmar flex flex-col overflow-hidden font-semibold h-[29px]'>
+                        <span>ချစ်တယ်</span>
+                        <span>မြတ်နိုးတယ်</span>
+                        <span>အတူရှိချင်တယ်</span>
+                        <span>ချစ်တယ်</span>
+                        <span>မြတ်နိုးတယ်</span>
+                        <span>အတူရှိချင်တယ်</span>
+                    </div>
                 </div>
             </div>
             <div className='flex flex-col w-full '>
