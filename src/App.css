@@ -1,5 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?&family=Padauk:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Padauk:wght@400;700&family=Noto+Sans+TC:wght@100..900&family=Emilys+Candy&family=Noto+Sans+TC:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.yes-btn:hover::after{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: auto;
+    aspect-ratio: 1/1;
+    background-image: url("/public/happy.png");
+    background-size: contain;
+    background-position: center;
+}

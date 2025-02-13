@@ -14,7 +14,8 @@ export default {
         yellow2:"#FFE074"
       },
       fontFamily:{
-        myanmar:  "Padauk"
+        myanmar:  "Padauk",
+        love: "Emilys Candy",
       }
     },
   },

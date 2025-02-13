@@ -10,7 +10,6 @@ const Lp = () => {
     const totalDays = now.diff(startDate, "days").toObject(); 
     const [time, setTime] = useState(now.diff(startDate, ["years", 'months', 'days', "hours", "minutes", "seconds"]).toObject());
     const { years, months, days, hours, minutes, seconds } = time
-    console.log(totalDays);
     
     useEffect(() => {
         const updateTime = setInterval(() => {
@@ -48,8 +47,8 @@ const Lp = () => {
                 <p className='text-lg text-start w-full font-myanmar font-semibold'>နန်း</p>
                 <p className='text-3xl font-semibold text-center'>
                     {years ? years > 0 && <>
-                        <span>{(years - 10 >= 0) ? years : "0" + years}</span>
-                        <span>{years > 1 ? "Years" : "Year"}</span>
+                        <span>{(years - 10 >= 0) ? years : "0" + years} </span>
+                        <span>{years > 1 ? "Years" : "Year"} : </span>
                     </>:""}
                     <span>{(months && months - 10 >= 0) ? months : "0" + months} </span>
                     <span>{months && months > 1 ? "Months" : "Month"} : </span>  

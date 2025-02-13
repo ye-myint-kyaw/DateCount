@@ -1,9 +1,9 @@
-import Home from "./page/Home"
+import View from "./routes"
 import "./App.css"
 
 const App = () => {
   return (
-    <div><Home/></div>
+    <View/>
   )
 }
 
