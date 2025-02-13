@@ -3,6 +3,7 @@ import gsap from 'gsap'
 import { DateTime } from "luxon";
 import { useEffect, useState } from 'react';
 import ImgScroll from "../../assets/img/img_scroll.jpg"
+import { NavLink } from 'react-router';
 
 const Lp = () => {
     const startDate = DateTime.fromISO("2023-08-15")
@@ -74,6 +75,7 @@ const Lp = () => {
                         <span>အတူရှိချင်တယ်</span>
                     </div>
                 </div>
+                <NavLink to={"/our-valentine"} className={"mt-10 flex items-center justify-center gap-1 rounded-md bg-pink-600 hover:bg-pink-400 transition-all text-white py-2 px-3 font-love"}>Valentine's day</NavLink>
             </div>
             <div className='flex flex-col w-full '>
                 <div className='flex-1 flex overflow-hidden'>
